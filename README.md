@@ -1,6 +1,7 @@
 k311 mir平台+Kinectv2 ros包安装
-install_script_1.0为完整版，包括ros，mir，Kinect，ur5,气动夹爪
-install_script_2.0为简约版本只安装mir和kinect
+
+install_script_1.0为完整版，包括ros，mir，Kinect，ur5,气动夹爪。
+install_script_2.0为简约版本只安装mir和kinect。
 
 对于一全新系统，将安装包解压至任意路径下，在该路径下打开终端。
 tip：在运行前将软件安装源修改为清华大学的源。
