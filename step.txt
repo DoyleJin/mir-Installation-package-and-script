@@ -1,0 +1,26 @@
+# Picking demo
+ssh nvidia@tegra-ubuntu.local
+sudo ./jetson_clocks.sh
+sudo ntpdate 192.168.12.20
+roslaunch iqr_4d_bringup iqr_bringup.launch
+
+ssh nvidia@tegra-ubuntu.local
+roslaunch iqr_4d_moveit_config iqr_4d_moveit_execute_without_rviz.launch
+(You can start planning now!)
+
+ssh nvidia@tegra-ubuntu.local
+cd ~/workspace/demo/
+python picking_demo.py
+
+-------------------------------------------------------------
+
+
+# ORB_SLAM2
+roslaunch kinect2_bridge kinect2_bridge.launch
+roslaunch ORB_SLAM2 orb_slam_with_kinect2.launch
+
+
+-------------------------------------------------------------
+
+export ROS_MASTER_URI="http://tegra-ubuntu.local:11311"
+roslaunch iqr_4d_description view.launch
